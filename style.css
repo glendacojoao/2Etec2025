@@ -1,0 +1,114 @@
+/* Estilo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #00d2ff, #3a7bd5, #ff0080);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Adicionando formas geométricas animadas */
+body::before, body::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    z-index: -1;
+    animation: float 5s infinite alternate ease-in-out;
+}
+
+body::before {
+    top: 10%;
+    left: 10%;
+}
+
+body::after {
+    bottom: 10%;
+    right: 10%;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(40px); }
+}
+
+/* Cabeçalho */
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+/* Seções de conteúdo */
+section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Chat Box */
+#chat-box {
+    width: 90%;
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Mensagens do chat */
+.message {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.user-message {
+    background: linear-gradient(45deg, #ff00c3, #ff8c00);
+    color: white;
+    text-align: right;
+    box-shadow: 0 4px 15px rgba(255, 0, 195, 0.5);
+}
+
+.bot-message {
+    background: linear-gradient(45deg, #00bcd4, #1e88e5);
+    color: black;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0, 188, 212, 0.5);
+}
+
+/* Input e botão */
+#userInput {
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    background: linear-gradient(45deg, #ff3d8f, #ff8c00);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
